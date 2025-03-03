@@ -24,13 +24,13 @@ class WordWarp {
                 showHelp();
             } else if (input.equals("e")) {
                 exitGame(0);
-                scanner.close();
             } else {
                 System.out.printf("\tInvalid input. Please enter 'S' to begin" +
                 ", 'H' for help, or 'E' to exit: ");
+                continue;
             }
+            validInput = true;
         }
-
         scanner.close();
     }
 

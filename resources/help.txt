@@ -1,0 +1,51 @@
+===========================================
+            WORD WARP - HELP
+===========================================
+
+Welcome to Word Warp! 
+
+Word Warp is a text-based word scramble game where you're given a shuffled 
+7-letter word. Your goal is to determine the original word to advance to the 
+next round.
+
+In addition to unscrambling the main word, you must also find as many 
+sub-words as possible using the given letters. Sub-words must be at least 
+3 letters long.
+
+Each valid word earns you points based on its length.
+
+You have 3 "Word Warps," which allow you to reshuffle the main word. This 
+may help you spot new sub-words more easily.
+
+A two-minute timer per round will be implemented in the future, along with 
+save functionality so you can continue later, and a high-score board.
+
+===========================================
+              HOW TO PLAY
+===========================================
+
+At the prompt, type words you find. If the word is valid, it will be 
+registered, and you will earn points based on its length.
+
+Undiscovered words will be shown as dashes representing their length. 
+For example, if "fine" has not been found yet, it will appear as:
+
+    ---- 
+
+All sub-words will be listed in alphabetical order to help track which 
+words you still need to discover.
+
+Additional commands may be made at the prompt while playing to perfom the 
+following:
+
+    !shuffle - shuffles the main word, up to three times.
+    !exit - exits the game, will save the game once that functionality is added.
+
+===========================================
+             FUTURE FEATURES
+===========================================
+
+Planned updates include an options menu where you can select word length, 
+adjust the time limit, and customize other settings.
+
+Get ready to test your word skills and aim for the high score!

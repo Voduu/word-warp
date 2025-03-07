@@ -3,6 +3,7 @@ import java.io.File;
 
 class WordWarp {
     final int CONSOLE_HEIGHT = 16;
+    
     public static void main(String[] args) {
         WordWarp p = new WordWarp();
         p.startGame();

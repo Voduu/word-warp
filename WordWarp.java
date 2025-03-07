@@ -8,14 +8,14 @@ class WordWarp {
 
     private void startGame() {
         String input;
-        boolean validInput = false;
 
-        System.out.printf("\tWelcome to Word Warp!\n\n" +
-            "\tTo begin, type 'S.' For help, type 'H'. To exit, type 'E': ");
+        System.out.printf("\tWelcome to Word Warp!\n\n");
         
         Scanner scanner = new Scanner(System.in);
 
-        while (!validInput) {
+        while (true) {
+            System.out.printf("\tPlease enter 'S' to begin, 'H' for help, or " +
+                "'E' to exit: ");
             input = scanner.nextLine().toLowerCase();
 
             if (input.equals("s")) {
@@ -24,12 +24,10 @@ class WordWarp {
                 showHelp();
             } else if (input.equals("e")) {
                 exitGame(0);
+                break;
             } else {
-                System.out.printf("\tInvalid input. Please enter 'S' to begin" +
-                ", 'H' for help, or 'E' to exit: ");
-                continue;
+                System.out.printf("\tInvalid input.");
             }
-            validInput = true;
         }
         scanner.close();
     }

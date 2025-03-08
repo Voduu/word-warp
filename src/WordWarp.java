@@ -3,8 +3,6 @@ import java.io.File;
 
 class WordWarp {
     final int CONSOLE_HEIGHT = 16;
-    int wordLength = 7;
-    int timeLimit = 120;
 
     public static void main(String[] args) {
         WordWarp p = new WordWarp();

@@ -3,6 +3,8 @@ import java.io.File;
 
 class WordWarp {
     final int CONSOLE_HEIGHT = 16;
+    int wordLength = 7;
+    int timeLimit = 120;
 
     public static void main(String[] args) {
         WordWarp p = new WordWarp();
@@ -19,8 +21,8 @@ class WordWarp {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.printf("\tPlease enter 'S' to begin, 'H' for help, or " +
-                "'E' to exit: ");
+            System.out.printf("\tPlease enter 'S' to begin, 'H' for help, " +
+                "'O' for options, or 'E' to exit: ");
             input = scanner.nextLine().toLowerCase();
 
             if (input.equals("s")) {
@@ -28,6 +30,9 @@ class WordWarp {
             } else if (input.equals("h")) {
                 System.out.printf("\n");
                 showHelp();
+            } else if (input.equals("o")) {
+                System.out.printf("\n");
+                showOptions();
             } else if (input.equals("e")) {
                 exitGame(0);
                 break;
@@ -68,6 +73,11 @@ class WordWarp {
         } catch (Exception e) {
             System.out.printf("\n%s", e);
         }
+    }
+
+    private void showOptions() {
+        System.out.printf("\t\tOptions not currently available.");
+        System.out.printf("\n\n");
     }
 
     private void exitGame(int exitCode) {

@@ -71,7 +71,7 @@ class WordWarp {
 
             System.out.printf("\n\n");
         } catch (Exception e) {
-            System.out.printf("\n%s", e);
+            System.out.printf("\n%s\n\n", e);
         }
     }
 

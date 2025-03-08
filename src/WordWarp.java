@@ -18,21 +18,21 @@ class WordWarp {
         System.out.printf("\tBefore continuing, please ensure your console " + 
             "is at least %d rows tall.\n\n", CONSOLE_HEIGHT);
         
-        Scanner scanner = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);
 
         while (true) {
             System.out.printf("\tPlease enter 'S' to begin, 'H' for help, " +
                 "'O' for options, or 'E' to exit: ");
-            input = scanner.nextLine().toLowerCase();
+            input = userInput.nextLine().toLowerCase();
 
             if (input.equals("s")) {
                 playGame();
             } else if (input.equals("h")) {
                 System.out.printf("\n");
-                showHelp();
+                showHelp(userInput);
             } else if (input.equals("o")) {
                 System.out.printf("\n");
-                showOptions();
+                showOptions(userInput);
             } else if (input.equals("e")) {
                 exitGame(0);
                 break;
@@ -40,17 +40,16 @@ class WordWarp {
                 System.out.printf("\tInvalid input.");
             }
         }
-        scanner.close();
+        userInput.close();
     }
 
     private void playGame() {
 
     }
 
-    private void showHelp() {
+    private void showHelp(Scanner userInput) {
         try {
             Scanner inFile = new Scanner(new File("../resources/help.txt"));
-            Scanner scanner = new Scanner(System.in);
             int lineCount = 0;
             String input;
 
@@ -61,13 +60,12 @@ class WordWarp {
                 // Hold for user input after every (CONSOLE_HEIGHT - 2) lines.
                 if (lineCount % (CONSOLE_HEIGHT - 2) == 0) {
                     System.out.printf("\n\tPress any key to continue...");
-                    input = scanner.nextLine();
+                    input = userInput.nextLine();
                     System.out.printf("\n");
                 }
             }
 
             inFile.close();
-            scanner.close();
 
             System.out.printf("\n\n");
         } catch (Exception e) {
@@ -75,7 +73,7 @@ class WordWarp {
         }
     }
 
-    private void showOptions() {
+    private void showOptions(Scanner userInput) {
         System.out.printf("\t\tOptions not currently available.");
         System.out.printf("\n\n");
     }

@@ -26,7 +26,7 @@ class WordWarp {
             input = userInput.nextLine().toLowerCase();
 
             if (input.equals("s")) {
-                playGame();
+                playGame(userInput);
             } else if (input.equals("h")) {
                 System.out.printf("\n");
                 showHelp(userInput);
@@ -43,7 +43,7 @@ class WordWarp {
         userInput.close();
     }
 
-    private void playGame() {
+    private void playGame(Scanner userInput) {
 
     }
 
